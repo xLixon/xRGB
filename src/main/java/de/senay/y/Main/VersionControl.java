@@ -21,11 +21,6 @@ public class VersionControl {
             HttpResponse<String> response = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
 
-
-            System.out.println(response.body());
-            System.out.println(version);
-            System.out.println(response.body().contains(version));
-
             if (response.body().contains(version)) {
                 JOptionPane pane1 = new JOptionPane();
                 pane1.createDialog("Software Version Control");
